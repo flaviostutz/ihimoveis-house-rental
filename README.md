@@ -6,6 +6,10 @@ I developed it along with Hugo Gonzalez (he was the designer) for the rental age
 
 This website was run with this system for various years.
 
+If you are curious, check the website at [Wayback Machine in 2002!](https://web.archive.org/web/20020515000000*/ihimoveis.com.br)
+
+<img src="screenshot.png" with="600"></img>
+
 ## Constraints at the time
 
 * Internet connection was very expensive and we had to upload photos during the night, because the rates were much lower
