@@ -1,0 +1,6 @@
+locação = 1
+venda = 2
+
+casa = 1
+apartamento = 2
+sala comercial = 3

@@ -1,0 +1,9 @@
+open ftp.ihimoveis.com.br
+xxxxxxxxx
+xxxxxxxxx
+cd web\imoveis
+mput saida\imoveis\*
+mget \web\offline\*
+delete \web\offline\*
+bye
+quit

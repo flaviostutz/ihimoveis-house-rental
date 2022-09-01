@@ -1,0 +1,47 @@
+<script language="vbscript" runat="server">
+
+sub Application_OnStart
+	'//general application configuration
+	mdbFile = "imoveis\ihimoveis.mdb" 'default
+	mdbStat = "imoveis\ihStat.mdb" 'statistics
+	
+	Application.Lock
+	'mdbFile for the site
+	Application("mdbFile") = mdbFile
+	Application("mdbStat") = mdbStat
+
+	'image sizes
+	Application("thumbWidth") = 100
+	Application("thumbHeight") = 75
+	Application("imgWidth") = 500
+	Application("imgHeight") = 375
+	
+	Application.Unlock
+end sub
+
+sub Application_OnEnd
+	'myConn.close
+end sub
+
+sub Session_OnStart
+on error resume next
+	'same as the addStatistics method in common.inc
+	Set myConn = Server.CreateObject("ADODB.Connection")
+	myConn.open "DBQ=" & Server.MapPath(Application("mdbStat")) & ";Driver={Microsoft Access Driver (*.mdb)}"
+	if Application("lastUpdateDay") <> Day(Date) then
+		sqlStr = "select max(cod) as nextCod from statistics;"
+		set RS = myConn.Execute(sqlStr)
+		nextCod = RS("nextCod")+1
+		sqlStr = "insert into statistics (cod,theDate) values (" & nextCod & ",'" & Date & "');"
+		myConn.Execute(sqlStr)
+	end if
+	sqlStr = "update statistics set visitantes=visitantes+1 where theDate='" & Date & "';"
+	myConn.Execute(sqlStr)
+	Application("lastUpdateDay") = Day(Date)
+end sub
+
+sub Session_OnEnd
+end sub
+
+
+</script>
