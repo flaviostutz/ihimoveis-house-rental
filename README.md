@@ -27,6 +27,6 @@ If you are curious, check the website at [Wayback Machine in 2002!](https://web.
 
 ## Remarks
 
-At the time the agency won some prices and appeared in newspapers because of this solution. It was very nice to see that their business changed a lot after employing the website, for example, because they started reaching people from other cities, which was very hard before as they told us!
+At the time the agency won some prizes and appeared in newspapers because of this solution. It was very nice to see that their business changed a lot after employing the website, for example, because they started reaching people from other cities, which was very hard before as they told us!
 
 It was a lot of fun doing this!!!
